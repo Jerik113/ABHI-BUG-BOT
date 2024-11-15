@@ -79,7 +79,7 @@ const {  state, saveCreds } =await useMultiFileAuthState(`./session`)
          phoneNumber = phoneNumber.replace(/[^0-9]/g, '')
 
          // Ask again when entering the wrong number
-         if (!Object.keys(PHONENUMBER_MCC).some(v => phoneNumber.startsWith(v))) {
+         if (!Object.keys(PHONENUMBER_MCC).some(v => phoneNumber.startsWith(v)))
             console.log(chalk.bgBlack(chalk.redBright("Enter Your WhatsApp Number With Your Contry Code, 📌Example : +919074692450")))
 
             phoneNumber = await question(chalk.bgBlack(chalk.greenBright(`Enter Your WhatsApp Number With Your County Code 😊\n📌Example: +919074692450 : `)))
